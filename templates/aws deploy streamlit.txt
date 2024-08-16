@@ -1,0 +1,13 @@
+To create requirements.txt file:
+pip freeze > requirements.txt
+
+
+sudo apt update
+sudo apt-get install python3-pip git
+sudo apt-get install python3-venv
+git clone https://github.com/praveenj1412/Medical-insurance
+python3 -m venv venv
+source venv/bin/activate
+cd Medical-insurance
+pip install -r requirements.txt
+streamlit run app.py

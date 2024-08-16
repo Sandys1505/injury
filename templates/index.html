@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Injury Severity Prediction</title>
+</head>
+<body>
+    <h1>Predict Injury Severity</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="feature1">Feature 1:</label>
+        <input type="text" id="feature1" name="feature1" placeholder="Enter feature 1"><br><br>
+
+        <label for="feature2">Feature 2:</label>
+        <input type="text" id="feature2" name="feature2" placeholder="Enter feature 2"><br><br>
+
+        <label for="feature3">Feature 3:</label>
+        <input type="text" id="feature3" name="feature3" placeholder="Enter feature 3"><br><br>
+
+        <label for="feature4">Feature 4:</label>
+        <input type="text" id="feature4" name="feature1" placeholder="Enter feature 1"><br><br>
+
+        <label for="feature5">Feature 5:</label>
+        <input type="text" id="feature5" name="feature2" placeholder="Enter feature 2"><br><br>
+
+        <label for="feature6">Feature 6:</label>
+        <input type="text" id="feature6" name="feature3" placeholder="Enter feature 3">
+
+        <!-- Add more features as required -->
+        
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
